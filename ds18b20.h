@@ -8,8 +8,9 @@ typedef struct {
     ds18b20_interface_t interface;
 } ds18b20_t;
 
-ds18b20_err_t
-ds18b20_initialize(ds18b20_t* ds18b20, ds18b20_config_t const* config, ds18b20_interface_t const* interface);
+ds18b20_err_t ds18b20_initialize(ds18b20_t* ds18b20,
+                                 ds18b20_config_t const* config,
+                                 ds18b20_interface_t const* interface);
 ds18b20_err_t ds18b20_deinitialize(ds18b20_t* ds18b20);
 
 ds18b20_err_t ds18b20_get_tem_data_raw(ds18b20_t const* ds18b20, int16_t* raw);
