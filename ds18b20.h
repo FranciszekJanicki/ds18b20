@@ -14,7 +14,8 @@ ds18b20_err_t ds18b20_initialize(ds18b20_t* ds18b20,
 ds18b20_err_t ds18b20_deinitialize(ds18b20_t* ds18b20);
 
 ds18b20_err_t ds18b20_get_tem_data_raw(ds18b20_t const* ds18b20, int16_t* raw);
-ds18b20_err_t ds18b20_get_temp_data_scaled(ds18b20_t const* ds18b20, float* scaled);
+ds18b20_err_t ds18b20_get_temp_data_scaled(ds18b20_t const* ds18b20,
+                                           float* scaled);
 
 ds18b20_err_t ds18b20_transmit_slave_address(ds18b20_t const* ds18b20);
 ds18b20_err_t ds18b20_wait_convert(ds18b20_t const* ds18b20);
