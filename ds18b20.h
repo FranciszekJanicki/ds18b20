@@ -3,6 +3,10 @@
 
 #include "ds18b20_config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     ds18b20_config_t config;
     ds18b20_interface_t interface;
@@ -31,5 +35,9 @@ ds18b20_err_t ds18b20_send_copy_scratchpad_cmd(ds18b20_t const* ds18b20);
 ds18b20_err_t ds18b20_send_convert_t_cmd(ds18b20_t const* ds18b20);
 ds18b20_err_t ds18b20_send_recall_e2_cmd(ds18b20_t const* ds18b20);
 ds18b20_err_t ds18b20_send_read_pow_sup_cmd(ds18b20_t const* ds18b20);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // DS18B20_DS18B20_H

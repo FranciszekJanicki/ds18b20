@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define DS18B20_LSB_SCALE (1.0F / 16.0F)
 
 typedef enum {
@@ -38,5 +42,9 @@ typedef struct {
     ds18b20_err_t (*ow_transmit)(void*, uint8_t const*, size_t);
     ds18b20_err_t (*ow_receive)(void*, uint8_t*, size_t);
 } ds18b20_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // DS18B20_DS18B20_CONFIG_H
